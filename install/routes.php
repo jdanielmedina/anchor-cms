@@ -178,7 +178,8 @@ Route::get('account', array('before' => 'check', 'main' => function () {
         return Response::redirect('metadata');
     }
 
-    
+    // in my installation I found error here. I need add to work.
+    $vars = array();
 
     return Layout::create('account', $vars);
 }));
